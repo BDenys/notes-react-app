@@ -4,6 +4,7 @@ import {
   CategoriesPageComponent, 
   HomePageComponent, 
   LoginPageComponent, 
+  MainLayoutComponent, 
   PageNotFoundComponent,
   RegisterPageComponent 
 } from '../Layouts';
@@ -27,10 +28,13 @@ const GlobalRoutes = () => {
         isAuth 
           ? 
             <>
-              <Route path={ RouteTypes.HOME_PAGE_PATH } element={ <HomePageComponent/> }  />
               <Route path={ RouteTypes.LOGIN_PAGE_PATH } element={ <LoginPageComponent/> }  />
-              <Route path={ RouteTypes.CATEGORIES_PATH } element={ <CategoriesPageComponent/> }  />
               <Route path={ RouteTypes.REGISTER_PAGE_PATH } element={ <RegisterPageComponent/> }  />
+
+              <Route path={ RouteTypes.HOME_PAGE_PATH} element={<MainLayoutComponent/>}>
+                <Route path={ RouteTypes.HOME_PAGE_PATH } element={ <HomePageComponent/> }  />
+                <Route path={ RouteTypes.CATEGORIES_PATH } element={ <CategoriesPageComponent/> }  />
+              </Route>
               <Route path={ RouteTypes.PAGE_NOT_FOUND_PATH } element={ <PageNotFoundComponent /> } />
             </>
           :

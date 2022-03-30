@@ -3,3 +3,4 @@ export { RegisterPageComponent } from './RegisterPageComponent/RegisterPageCompo
 export { HomePageComponent } from './HomePageComponent/HomePageComponent';
 export { CategoriesPageComponent } from './CategoriesPageComponent/CategoriesPageComponent'
 export { PageNotFoundComponent } from './PageNotFoundComponent/PageNotFoundComponent';
+export { MainLayoutComponent } from './MainLayoutComponent/MainLayoutComponent';
